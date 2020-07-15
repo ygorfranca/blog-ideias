@@ -1,1 +1,1 @@
-"Meu blog de ideias com springboot" 
+Meu blog de ideias com springboot
