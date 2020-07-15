@@ -1,4 +1,4 @@
-package br.com.studyathome.blogideias.services.servicesImpl;
+package br.com.studyathome.blogideias.services.impl;
 
 import br.com.studyathome.blogideias.model.Post;
 import br.com.studyathome.blogideias.repository.BlogIdeiasRepository;
@@ -11,10 +11,15 @@ import java.util.List;
 @Service
 public class BlogIdeiasServiceImpl implements BlogIdeiasService{
 
-    @Autowired
-    BlogIdeiasRepository repository;
 
-    @Override
+    BlogIdeiasRepository repository;
+    
+    @Autowired
+    public BlogIdeiasServiceImpl(BlogIdeiasRepository repository) {
+		this.repository = repository;
+	}
+
+	@Override
     public List<Post> findAll() {
         return repository.findAll();
     }
